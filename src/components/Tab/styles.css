@@ -1,0 +1,19 @@
+li.tab-list-item {
+    color: #151812;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: 500;
+    position: relative;
+    display: inline-block;
+    padding: 7px 15px;
+    border-radius: 30px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+li.tab-list-active {
+    background-color: aqua;
+    color: #000000 !important;
+}

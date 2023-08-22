@@ -1,0 +1,230 @@
+.ms-modal-container {
+    position: fixed;
+    z-index: 10001;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%; 
+    height: 100vh; 
+    transform:scale(0);
+    color: #000;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.ms-modal-container.show {
+    display: table;
+    transform:scale(1);
+}
+
+.modal-background {
+    display:table-cell;
+    background:rgba(0,0,0,.8);
+    text-align:center;
+    vertical-align:middle;
+}
+
+.ms-modal {
+    position: relative;
+    background: white;
+    padding: 20px;
+    display: inline-block;
+    border-radius: 3px;
+    width: 50%;
+    max-height: 500px;
+    overflow-y: auto;
+}
+
+.modal-svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 3px;
+}
+
+.modal-svg rect {
+    width: 100%;
+    height: 100%;
+    stroke: #fff;
+    stroke-width: 2px;
+    stroke-dasharray: 2450;
+    stroke-dashoffset: 2450;
+}
+
+  
+
+.close {
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+  
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-header {
+    padding: 2px 16px;
+}
+
+.out {
+    animation: quickScaleDown 0s .5s linear forwards;
+}
+
+.modal-background {
+    background:rgba(0,0,0,.0);
+    animation: fadeIn .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+}
+
+.out .modal-background {
+    animation: fadeOut .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+}
+
+.ms-modal {
+    background-color:transparent;
+    animation: modalFadeIn .5s .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+}
+
+.out .ms-modal {
+    animation: modalFadeOut .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+}
+
+.ms-modal-content {
+    opacity:0;
+    z-index: 10002;
+    position:relative;
+    text-align: left;
+    animation: modalContentFadeIn .5s .6s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+}
+
+.out .ms-modal-content {
+    animation: modalContentFadeOut .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+}
+
+.modal-svg rect {
+    animation: sketchIn .5s .3s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+}
+
+.out .modal-svg rect {
+    animation: sketchOut .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+}
+
+@media (max-width: 767px) {
+    .ms-modal {
+        animation: modalFadeIn .5s .5s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+    }
+
+    .ms-modal-content {
+        animation: modalContentFadeIn .5s .6s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+    }
+
+    .modal-svg rect {
+        animation: sketchIn 2s 0.3s cubic-bezier(0.165, 0.840, 0.440, 1.000) forwards;
+    }
+
+    .ms-modal {
+        width: 70%;
+    }
+    
+}
+
+
+@media (max-width: 412px) {
+    .ms-modal {
+        width: 90%;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        background:rgba(0,0,0,.0);
+    }
+    100% {
+        background:rgba(0,0,0,.7);
+    }
+}
+  
+@keyframes fadeOut {
+    0% {
+        background:rgba(0,0,0,.7);
+    }
+    100% {
+        background:rgba(0,0,0,.0);
+    }
+  }
+
+@keyframes modalFadeIn {
+    0% {
+        background-color:transparent;
+    }
+    100% {
+        background-color:white;
+    }
+}
+
+@keyframes modalFadeOut {
+    0% {
+        background-color:white;
+    }
+    100% {
+        background-color:transparent;
+    }
+}
+
+
+@keyframes modalContentFadeIn {
+    0% {
+        opacity:0;
+        top:-20px;
+    }
+    100% {
+        opacity:1;
+        top:0;
+    }
+}
+  
+@keyframes modalContentFadeOut {
+    0% {
+        opacity:1;
+        top:0px;
+    }
+    100% {
+        opacity:0;
+        top:-20px;
+    }
+}
+@keyframes sketchIn {
+	0% {
+		stroke-dashoffset: 2450;
+	}
+	100% {
+		stroke-dashoffset: 0;
+	}
+}
+
+@keyframes sketchOut {
+	0% {
+		stroke-dashoffset: 0;
+	}
+	100% {
+		stroke-dashoffset: 2450;
+	}
+}
+
+
+@keyframes quickScaleDown {
+    0% {
+        transform:scale(1);
+    }
+    99.9% {
+        transform:scale(1);
+    }
+    100% {
+        transform:scale(0);
+    }
+}

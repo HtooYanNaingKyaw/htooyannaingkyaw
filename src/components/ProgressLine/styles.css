@@ -1,0 +1,69 @@
+
+@keyframes progress-bar-stripes {
+    0% {
+        background-position: 1rem 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+.progress {
+    position: relative;
+}
+
+.progress div {
+    height: 12px;
+    border-radius: 3px;
+    background-color: #eee;
+}
+
+.progress .icon {
+    display: block;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.progress .icon .title {
+    font-weight: 700;
+    position: relative;
+    margin-bottom: 3px;
+    top: -1px;
+    font-size: 14px;
+    display: block;
+    padding-top: 9px;
+    padding-left: 15px;
+}
+
+.progress-count {
+    top: 12px;
+    right: 0;
+    position: absolute;
+    color: #151812;
+    font-weight: 500;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.progress-line {
+    height: 12px;
+    border-radius: 3px;
+    background-color: #eee;
+}
+
+.progress-line .progress-bar {
+    width: 0;
+    background-size: 1rem 1rem;
+    background-color: aqua;
+    background-image: linear-gradient(45deg,hsla(0,0%,50%,.15) 25%,transparent 0,transparent 50%,hsla(0,0%,50%,.15) 0,hsla(0,0%,50%,.15) 75%,transparent 0,transparent);
+    -webkit-animation: progress-bar-stripes 1s linear infinite;
+    animation: progress-bar-stripes 1s linear infinite;
+}
+
+.progress.display-center {
+    top: 50%;
+    left: 50%;
+    width: 10%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+}

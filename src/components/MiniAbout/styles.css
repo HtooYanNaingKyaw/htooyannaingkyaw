@@ -1,0 +1,100 @@
+.display-center {
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+}
+
+.about-wrapper {
+    box-sizing: border-box;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    max-width: 80%;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.about-wrapper .left {
+    display: block;
+    width: 75%;
+}
+
+.about-wrapper .left p {
+    margin-bottom: 20px;
+}
+
+.about-wrapper .left button {
+    cursor: pointer;
+    border: none;
+    background-color: aqua;
+    height: 45px;
+    font-size: 14px;
+    padding: 12px 27px;
+    font-weight: 700;
+    white-space: nowrap;
+    transition: all .3s;
+}
+
+.about-wrapper .left button:hover {
+    color: #ffffff;
+}
+
+.about-wrapper .left button:focus {
+    outline: none;
+}
+
+.about-wrapper .right {
+    display: block;
+    width: 25%;
+}
+
+.about-wrapper .right .profile-img {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.about-wrapper .right .profile-img img {
+    vertical-align: middle;
+    max-width: 100%;
+}
+
+@media (max-width: 992px) {
+    .about-wrapper .right .profile-img {
+        width: 200px;
+        height: 200px;
+        margin: 0px auto 30px auto;
+    }
+
+    .display-center {
+        position: relative;
+        top: 20%;
+        left: 50%;
+        width: 100%;
+        position: absolute;
+        transform: translate(-50%,-50%);
+    }
+
+    .about-wrapper .right {
+        width: 100%;
+    }
+
+    .about-wrapper .left {
+        width: 100%;
+        top: 100%;
+        position: absolute;
+        text-align: center;
+        left: 0;
+    }
+
+    .about-wrapper .left h1 {
+        font-size: 33px;
+        line-height: 1.4;
+    }
+}

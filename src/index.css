@@ -1,0 +1,235 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+*, :after, :before {
+  box-sizing: border-box;
+}
+
+a {
+  color: #000000;
+  text-decoration: none;
+  transition: all .4s ease-in-out 0s;
+}
+
+img {
+  max-width: 100%;
+  border: 0;
+  vertical-align: middle;
+}
+
+.title {
+    font-weight: 700;
+    position: relative;
+    margin: 3px 0;
+    display: block;
+}
+
+h1 {
+    font-size: 50px;
+    line-height: 1.4;
+    margin-bottom: 36px;
+}
+
+h2 {
+    font-size: 20px;
+    line-height: 1.4;
+    margin: 0 0 9px 0;
+}
+
+h3 {
+    color: #151812;
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+ul li, ol li {
+  list-style: none;
+}
+
+button {
+  font-weight: 700;
+  white-space: nowrap;
+  display: inline-block;
+  margin-right: 2px;
+  transition: all .3s;
+  overflow: hidden;
+  position: relative;
+}
+
+button:not(:disabled):not(.disabled) {
+  cursor: pointer;
+}
+
+@media (max-width: 1100px) { 
+    /* .wrapper {
+        max-width: 960px;
+    } */
+}
+
+
+
+
+
+.divider {
+  display: inline-block;
+  margin: 0 9px 15px;
+  background-color: aqua;
+}
+
+.divider, .divider.divider-1 {
+  width: 63px;
+  height: 4px;
+  position: relative;
+}
+
+.divider.divider-1 {
+  margin-bottom: 15px;
+  background: aqua;
+}
+
+.divider.divider-1-1 {
+  margin-right: 12px!important;
+}
+
+.divider.divider-1-2:after, .divider.divider-1-2:before {
+  width: 5px;
+  height: 5px;
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  background-color: aqua;
+}
+
+.divider.divider-1-2:before {
+  left: -9px;
+}
+
+.divider.divider-1-2:after {
+  left: -17px;
+}
+
+span.error {
+  color: red;
+  font-style: italic;
+}
+
+span.success {
+  color: green;
+  font-style: italic;
+}
+
+
+
+
+
+
+
+
+
+
+.split-row {
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 0;
+  flex-shrink: 0;
+  align-items: normal;
+  justify-content: flex-start;
+}
+
+.split-row .left {
+  box-sizing: border-box;
+  min-height: 1px;
+  position: relative;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 50%;
+  flex: 0 0 50%;
+  max-width: 50%;
+  margin-left: 0%;
+  right: auto;
+  left: auto;
+}
+
+.split-row .left.ls {
+  width: 41.6667%;
+  flex: 0 0 41.6667%;
+  max-width: 41.6667%;
+}
+
+.split-row .right {
+  box-sizing: border-box;
+  min-height: 1px;
+  position: relative;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 50%;
+  flex: 0 0 50%;
+  max-width: 50%;
+  margin-left: 0%;
+  right: auto;
+  left: auto;
+}
+
+.split-row .right.rg {
+  width: 58.3333%;
+  flex: 0 0 58.3333%;
+  max-width: 58.3333%;
+
+}
+
+@media (max-width: 992px) {
+  .split-row .left.ls {
+      width: 50%;
+      max-width: 50%;
+      flex: 0 0 50%;
+  }
+
+  .split-row .right.rg {
+      width: 50%;
+      flex: 0 0 50%;
+      max-width: 50%;
+  }
+}
+
+
+@media (max-width: 767px) {
+
+  .split-row .left.ls {
+    display: none;
+  }
+  
+  .split-row .left {
+    width: 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .split-row .right.rg, .split-row .right {
+    width: 100%;
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+}

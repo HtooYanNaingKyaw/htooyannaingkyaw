@@ -1,0 +1,120 @@
+.about-image {
+    height: 100%;
+    position: relative;
+}
+
+.overlay-image {
+    background: no-repeat 50%/cover;
+    background-image: url('/src/assests/images/myimg.jpg');
+    top: 0;
+    left: 15px;
+    right: 15px;
+    height: 100%;
+    position: absolute;
+}
+
+
+
+
+
+
+
+
+/* About Info */
+.about-info {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+    display: flex;
+}
+
+.about-info ul {
+    display: inline-block;
+    margin: 20px 10px 0 0;
+    padding: 0;
+    width: 50%;
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+
+.about-info ul li {
+    margin-bottom: 20px;
+}
+
+.about-info li i {
+    display: inline-block;
+    color: aqua;
+    font-size: 1.4em;
+    width: 30px;
+    text-align: center;
+}
+
+.about-info li p {
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    line-height: 27px;
+    color: #292929;
+    margin-left: 10px;
+}
+
+@media (max-width: 626px) {
+    
+.about-info {
+    display: block
+}
+    .about-info ul {
+        width: 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* Horizontal Follw Me */
+.h-follw-me ul {    
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.h-follw-me ul li {
+    display: inline-block;
+    /* text-align: center;
+    margin: 0px 10px 10px 10px; */
+    transition: all .3s;
+}
+
+.h-follw-me ul li:hover {
+    transform: scale(1.5);
+}
+
+.h-follw-me ul li a {
+
+    
+    display: inline-block;
+    width: 35px;
+    height: 35px;
+    font-size: 20px;
+    text-align: center;
+    line-height: 35px;
+    border-radius: 5px;
+    margin-right: 15px;
+    background: aqua;
+    color: #ffffff;
+}
+
+.h-follw-me ul li a:hover {
+    text-decoration: none;
+    outline: none;
+}

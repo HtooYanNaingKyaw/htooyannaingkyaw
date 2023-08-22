@@ -1,0 +1,72 @@
+.service-wrapper {
+    display: flex;
+    overflow: hidden;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.service-wrapper .service {
+    width: 25%;
+    flex: 0 0 25%;
+    max-width: 25%;
+    padding: 5px;
+    position: relative;
+    text-align: center;
+    transition: all 180ms linear 0s;
+    transform: scale(1) rotate(0deg);
+    -webkit-animation: animate-project 1s linear;
+    animation: animate-project 1s linear;
+    margin-bottom: 30px;
+}
+
+.service-wrapper .service .content {
+    border: 1px solid #cccccc;
+    padding: 15px;
+}
+
+.service .service-icon {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+}
+
+.service .service-icon i {
+    font-size: 30px;
+    color: aqua;
+    margin-bottom: 20px;
+    font-weight: 900;
+}
+
+.service h4 {
+    font-weight: 600;
+    text-transform: capitalize;
+    margin-bottom: 20px
+}
+
+.service p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    line-height: 27px;
+    color: #292929;
+}
+
+
+@media (max-width: 992px) {
+    .service-wrapper .service {
+        width: 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+}
+
+@media (max-width: 726px) {
+    .service-wrapper .service {
+        width: 100%;
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
